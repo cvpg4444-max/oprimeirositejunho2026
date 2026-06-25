@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cátia Effertz — AI Business Strategy, Marketing, Sales & Automation. MIT-certified. 15 years of real business experience. Gothenburg, Sweden.">
+<title>Cátia Effertz · AI Business Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:opsz,wght@14..32,300..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF;
+  --bg-alt:#EEF8F8;
+  --ink:#192524;
+  --muted:#3D6463;
+  --faint:#7A9594;
+  --teal:#0ABAB5;
+  --teal-d:#007F7C;
+  --teal-m:#3D9E9B;
+  --surface:#D4EEEC;
+  --border:#A8DFDC;
+  --dark:#0D1F1E;
+  --headline:#004E49;
+  --max:1100px;
+  --pad:clamp(1.5rem,5vw,3.5rem);
+  --nav-h:64px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;object-fit:cover;}
+a{color:var(--teal);text-decoration:none;}
+a:hover{opacity:.7;}
+ul{list-style:none;}
+
+/* ── Language ── */
+.lp{display:none;}
+[data-lang="pt"] .le{display:none!important;}
+[data-lang="pt"] span.lp{display:inline!important;}
+[data-lang="pt"] h1.lp,[data-lang="pt"] h2.lp,[data-lang="pt"] h3.lp,[data-lang="pt"] p.lp,[data-lang="pt"] div.lp,[data-lang="pt"] li.lp{display:block!important;}
+[data-lang="pt"] .lp{display:block;}
+[data-lang="pt"] span.lp{display:inline;}
+
+/* ── Type ── */
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.02em;color:var(--headline);}
+.display{font-weight:300;font-size:clamp(2.6rem,5.5vw,4.8rem);line-height:1.04;}
+.display em{font-style:italic;color:var(--teal);}
+h2.sec-title{font-size:clamp(1.8rem,3.8vw,2.9rem);margin-bottom:.35em;}
+h3{font-size:clamp(1rem,1.6vw,1.15rem);}
+p{font-size:1rem;line-height:1.72;}
+p+p{margin-top:.9rem;}
+.lead{font-size:clamp(1rem,1.6vw,1.12rem);color:var(--muted);line-height:1.6;}
+.eyebrow{display:block;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-m);margin-bottom:.85rem;}
+strong{font-weight:600;}
+cite{font-style:normal;font-size:.8rem;color:var(--teal);opacity:.85;}
+
+/* ── Layout ── */
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad);}
+section{padding:clamp(4rem,9vw,7rem) 0;}
+section+section{border-top:1px solid var(--border);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start;}
+@media(max-width:900px){.two-col{grid-template-columns:1fr;}}
+
+/* ── Nav ── */
+nav{position:sticky;top:0;z-index:200;height:var(--nav-h);background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:100%;display:flex;align-items:center;justify-content:space-between;gap:2rem;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;font-weight:400;color:var(--ink);}
+.nav-logo span{color:var(--teal);}
+.nav-links{display:flex;align-items:center;gap:1.75rem;}
+.nav-links a{font-size:.84rem;font-weight:500;color:var(--muted);letter-spacing:.02em;transition:color .2s;}
+.nav-links a:hover{color:var(--ink);opacity:1;}
+.lang-btn{background:none;border:1.5px solid var(--teal);border-radius:6px;padding:.5rem 1.1rem;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:500;cursor:pointer;color:var(--teal);transition:all .2s;letter-spacing:.04em;}
+.lang-btn:hover{background:var(--surface);color:var(--teal-d);border-color:var(--teal-d);}
+.lang-btn .active{color:var(--teal-d);font-weight:600;}
+@media(max-width:760px){.nav-links{display:none;}}
+
+/* ── Hero ── */
+#home{padding:clamp(5rem,12vw,9rem) 0 clamp(3.5rem,8vw,6rem);border-top:none!important;}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;}
+.hero-content .display{margin-bottom:1.25rem;}
+.hero-sub{font-size:clamp(1rem,1.6vw,1.12rem);color:var(--muted);line-height:1.65;max-width:500px;margin-bottom:.75rem;}
+.hero-services{font-size:.82rem;color:var(--teal-m);font-weight:500;letter-spacing:.04em;margin-bottom:2rem;}
+.btn-group{display:flex;gap:.9rem;flex-wrap:wrap;}
+.btn{display:inline-block;background:var(--teal);color:#fff!important;padding:.85rem 2rem;border-radius:3px;font-size:.875rem;font-weight:600;letter-spacing:.04em;transition:background .2s;opacity:1!important;}
+.btn:hover{background:var(--teal-d);}
+.btn-ghost{display:inline-block;color:var(--ink)!important;padding:.85rem 2rem;border:1.5px solid var(--border);border-radius:3px;font-size:.875rem;font-weight:600;letter-spacing:.04em;transition:all .2s;opacity:1!important;}
+.btn-ghost:hover{border-color:var(--ink);}
+.photo-frame{width:100%;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:var(--bg-alt);border:0;display:block;}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+.photo-placeholder{text-align:center;padding:2rem;color:var(--faint);}
+.photo-placeholder .icon{font-size:2.5rem;margin-bottom:.75rem;}
+.photo-placeholder strong{color:var(--teal);display:block;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.5rem;}
+.photo-placeholder p{font-size:.82rem;line-height:1.5;}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr;}}
+
+/* ── Cred strip ── */
+.cred-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:3rem;}
+.cred-item{background:var(--bg);padding:1.25rem 1rem;text-align:center;}
+.cred-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;color:var(--teal);line-height:1;margin-bottom:.35rem;}
+.cred-l{font-size:.75rem;color:var(--muted);line-height:1.4;}
+@media(max-width:760px){.cred-strip{grid-template-columns:repeat(2,1fr);}}
+
+/* ── Services ── */
+#services{background:var(--bg-alt);}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.svc-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.svc-img{width:100%;height:200px;position:relative;background:var(--surface);}
+.svc-img img{width:100%;height:100%;object-fit:cover;}
+.svc-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(4,78,73,.78) 0%,rgba(0,0,0,.04) 65%);display:flex;align-items:flex-end;}
+.svc-overlay h3{color:#fff;padding:1.1rem 1.25rem;font-size:1.05rem;font-weight:400;letter-spacing:-.01em;}
+.svc-body{padding:1.1rem 1.25rem;}
+.svc-body p{font-size:.88rem;color:var(--muted);line-height:1.55;}
+@media(max-width:900px){.svc-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.svc-grid{grid-template-columns:1fr;}}
+
+/* ── About ── */
+.about-photo{width:100%;aspect-ratio:3/4;border-radius:10px;background:var(--bg-alt);border:2px dashed var(--border);display:flex;align-items:center;justify-content:center;}
+.about-text p{font-size:1rem;line-height:1.7;max-width:500px;}
+.about-text p+p{margin-top:1rem;}
+.about-text .closer{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;font-style:italic;color:var(--headline);margin-top:1.5rem;line-height:1.35;display:block;}
+.cred-box{background:var(--surface);border-radius:8px;padding:1.1rem 1.3rem;margin-top:1.5rem;}
+.cred-box p{font-size:.85rem;color:var(--muted);}
+.cred-box p strong{color:var(--ink);display:block;margin-top:.6rem;}
+
+/* ── Portfolio ── */
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.port-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;}
+.port-img{width:100%;height:200px;background:var(--bg-alt);position:relative;}
+.port-img img{width:100%;height:100%;object-fit:cover;}
+.port-fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;}
+.port-body{padding:1.4rem;flex:1;display:flex;flex-direction:column;gap:.5rem;}
+.port-tag{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-m);}
+.port-card h3{font-size:1rem;line-height:1.3;}
+.port-card p{font-size:.86rem;color:var(--muted);line-height:1.55;flex:1;}
+.port-stat{font-size:.78rem;color:var(--teal);font-weight:600;padding-top:.75rem;border-top:1px solid var(--border);}
+.pills{display:flex;flex-wrap:wrap;gap:.35rem;}
+.pill{font-size:.65rem;font-weight:600;padding:.25rem .6rem;background:var(--surface);border:1px solid var(--border);border-radius:40px;color:var(--muted);}
+@media(max-width:900px){.port-grid{grid-template-columns:1fr;}}
+
+/* ── Pain ── */
+#pain{background:var(--bg-alt);}
+.pain-list{list-style:none;margin-top:2rem;}
+.pain-list li{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:400;color:var(--headline);line-height:1.45;padding:.9rem 0;border-bottom:1px solid var(--border);position:relative;padding-left:1.5rem;}
+.pain-list li::before{content:'—';position:absolute;left:0;color:var(--teal);font-weight:400;}
+.pain-list li strong{font-weight:600;}
+.pain-list li em{font-style:italic;color:var(--teal-d);}
+.pain-close{margin-top:1.75rem;font-size:1rem;color:var(--muted);}
+
+/* ── Testimonials ── */
+#testimonials{background:var(--bg-alt);}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.test-card{background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:0 8px 8px 0;padding:1.5rem 1.4rem;display:flex;flex-direction:column;gap:1rem;}
+.test-quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.15rem;font-style:italic;font-weight:400;color:var(--headline);line-height:1.55;}
+.test-quote::before{content:'\201C';color:var(--teal);font-size:1.5rem;line-height:0;vertical-align:-.35em;margin-right:.15em;}
+.test-author{display:flex;flex-direction:column;gap:.2rem;margin-top:auto;}
+.test-name{font-size:.9rem;font-weight:600;color:var(--ink);}
+.test-meta{font-size:.75rem;color:var(--faint);}
+.test-context{margin-top:1.75rem;padding:1rem 1.25rem;background:var(--surface);border-radius:6px;}
+.test-context p{font-size:.82rem;color:var(--muted);line-height:1.55;}
+@media(max-width:900px){.test-grid{grid-template-columns:1fr;}}
+
+/* ── Blog ── */
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;}
+.art-card{border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--bg);display:flex;flex-direction:column;}
+.art-img{width:100%;height:200px;object-fit:cover;background:var(--bg-alt);}
+.art-body{padding:1.4rem;flex:1;display:flex;flex-direction:column;}
+.art-meta{font-size:.67rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:.65rem;}
+.art-card h3{font-size:1.05rem;line-height:1.25;margin-bottom:.75rem;color:var(--headline);}
+.art-content{display:none;margin-top:1rem;border-top:1px solid var(--border);padding-top:1rem;}
+.art-content p{font-size:.9rem;line-height:1.72;}
+.art-content p+p{margin-top:.8rem;}
+.art-content h4{font-size:1rem;margin:1.1rem 0 .4rem;color:var(--headline);}
+.art-card.open .art-content{display:block;}
+.sources{margin-top:1.25rem;padding:1rem;background:var(--bg-alt);border-radius:6px;}
+.sources p{font-size:.8rem;color:var(--muted);line-height:1.55;}
+.sources strong{display:block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-m);margin-bottom:.5rem;}
+.read-btn{display:inline-block;margin-top:.9rem;font-size:.78rem;font-weight:600;color:var(--teal);letter-spacing:.04em;cursor:pointer;background:none;border:none;padding:0;font-family:inherit;}
+@media(max-width:760px){.blog-grid{grid-template-columns:1fr;}}
+
+/* ── Contact ── */
+#contact{background:var(--dark);}
+#contact .eyebrow{color:var(--teal-m);}
+#contact .sec-title{color:#fff;}
+.contact-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start;}
+#contact p{color:rgba(255,255,255,.65);}
+.c-links{display:flex;flex-direction:column;gap:.9rem;margin-top:1.75rem;}
+.c-link{display:flex;flex-direction:column;gap:.2rem;padding:1.1rem 1.25rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;color:#fff!important;opacity:1!important;transition:background .2s;}
+.c-link:hover{background:rgba(255,255,255,.11);}
+.c-lbl{font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.32);}
+.c-val{font-size:.9rem;font-weight:500;color:#fff;}
+.c-link-wa{background:rgba(37,211,102,.12)!important;border-color:rgba(37,211,102,.3)!important;}
+.c-link-wa:hover{background:rgba(37,211,102,.2)!important;}
+.avail{display:flex;align-items:center;gap:.6rem;margin-top:1.5rem;}
+.avail-dot{width:8px;height:8px;background:#5DBB8A;border-radius:50%;flex:0 0 auto;animation:pulse 2.4s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.avail-text{font-size:.84rem;color:rgba(255,255,255,.45);}
+.cta-big{display:block;margin-top:2rem;background:rgba(37,211,102,.15);border:1.5px solid rgba(37,211,102,.4);border-radius:8px;padding:1.4rem 1.75rem;text-align:center;color:#fff!important;opacity:1!important;transition:background .2s;}
+.cta-big:hover{background:rgba(37,211,102,.25);}
+.cta-big .cta-label{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);display:block;margin-bottom:.4rem;}
+.cta-big .cta-text{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:#fff;display:block;}
+@media(max-width:760px){.contact-layout{grid-template-columns:1fr;gap:2.5rem;}}
+
+/* ── WA Float ── */
+.wa-float{position:fixed;bottom:1.75rem;right:1.75rem;z-index:999;display:flex;align-items:center;gap:.6rem;background:#25D366;color:#fff!important;padding:.75rem 1.25rem .75rem .9rem;border-radius:50px;box-shadow:0 4px 20px rgba(37,211,102,.4);font-family:'Inter',sans-serif;font-size:.84rem;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s;opacity:1!important;}
+.wa-float:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(37,211,102,.5);opacity:1!important;}
+.wa-float svg{width:20px;height:20px;fill:#fff;flex:0 0 auto;}
+@media(max-width:560px){.wa-float span{display:none;}.wa-float{padding:.85rem;border-radius:50%;}}
+
+/* ── Footer ── */
+footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.07);padding:1.5rem 0;}
+.foot-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-style:italic;color:rgba(255,255,255,.28);}
+.foot-logo span{color:var(--teal);}
+.foot-copy{font-size:.74rem;color:rgba(255,255,255,.24);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="nav-logo">Cátia<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#services"><span class="le">Services</span><span class="lp">Serviços</span></a></li>
+      <li><a href="#about"><span class="le">About</span><span class="lp">Sobre</span></a></li>
+      <li><a href="#portfolio"><span class="le">Work</span><span class="lp">Trabalho</span></a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact"><span class="le">Contact</span><span class="lp">Contacto</span></a></li>
+    </ul>
+    <button class="lang-btn" onclick="toggleLang()">
+      <span id="lbl-en" class="active">EN</span>&nbsp;/&nbsp;<span id="lbl-pt">PT</span>
+    </button>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow"><span class="le">AI Business Consultant · MIT Professional Education · Gothenburg, Sweden</span><span class="lp">Consultora de IA Business · MIT Professional Education · Gotemburgo, Suécia</span></span>
+        <h1 class="display le">You don't need<br>another AI tool.<br>You need <em>a strategy.</em></h1>
+        <h1 class="display lp">Não precisas de<br>mais uma ferramenta.<br>Precisas de <em>uma estratégia.</em></h1>
+        <p class="hero-sub le">I diagnose your business, identify where AI creates real value, and build the systems that deliver it.</p>
+        <p class="hero-sub lp">Analiso o teu negócio, identifico onde a IA cria valor real, e construo os sistemas que o entregam.</p>
+        <p class="hero-services le">Strategy · Marketing &amp; Sales · Automation · Data Analysis · Training</p>
+        <p class="hero-services lp">Estratégia · Marketing &amp; Vendas · Automação · Análise de Dados · Formação</p>
+        <div class="btn-group">
+          <a href="https://wa.me/41765837353?text=Ol%C3%A1%20C%C3%A1tia%2C%20quero%20agendar%2030%20minutos%20gratuitos." target="_blank" rel="noopener" class="btn"><span class="le">Book 30 free minutes</span><span class="lp">Agenda 30 minutos gratuitos</span></a>
+          <a href="#portfolio" class="btn-ghost"><span class="le">See the work</span><span class="lp">Ver o trabalho</span></a>
+        </div>
+      </div>
+      <div>
+        <img src="catia.png" alt="Cátia Effertz" style="width:100%;border-radius:10px;aspect-ratio:4/5;object-fit:cover;object-position:top">
+      </div>
+    </div>
+
+    <div class="cred-strip">
+      <div class="cred-item"><div class="cred-n">15+</div><div class="cred-l"><span class="le">Years in real businesses</span><span class="lp">Anos em negócios reais</span></div></div>
+      <div class="cred-item"><div class="cred-n">MIT</div><div class="cred-l"><span class="le">AI &amp; ML certified 2026</span><span class="lp">Certificada em IA e ML 2026</span></div></div>
+      <div class="cred-item"><div class="cred-n">3</div><div class="cred-l"><span class="le">Production AI systems deployed</span><span class="lp">Sistemas de IA em produção</span></div></div>
+      <div class="cred-item"><div class="cred-n">100%</div><div class="cred-l"><span class="le">Recommendation rate · 18 reviews</span><span class="lp">Taxa de recomendação · 18 avaliações</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE ABOUT IMAGE -->
+<section>
+  <div class="wrap">
+    <img src="n8n.png" alt="Automation workflow" style="width:100%;max-width:900px;margin:0 auto;border-radius:10px;">
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <!-- about content here -->
+  </div>
+</section>
+
+<!-- PAIN -->
+<section id="pain">
+  <div class="wrap" style="max-width:780px">
+    <span class="eyebrow"><span class="le">Does this sound familiar?</span><span class="lp">Soa-te familiar?</span></span>
+    <ul class="pain-list le">
+      <li>You've heard AI can help your business — but <strong>nobody explains exactly how, for you.</strong></li>
+      <li>Your team answers the same questions <strong>every single day.</strong> On every channel.</li>
+      <li>You know AI could improve your marketing and sales — but <strong>you don't know where to start.</strong></li>
+      <li>You tried a tool. It was impressive for a week. <strong>Then it sat unused.</strong></li>
+    </ul>
+    <ul class="pain-list lp">
+      <li>Já ouviste que a IA pode ajudar o teu negócio — mas <strong>ninguém explica exatamente como, para ti.</strong></li>
+      <li>A tua equipa responde às mesmas perguntas <strong>todos os dias.</strong> Em todos os canais.</li>
+      <li>Sabes que a IA pode melhorar o teu marketing e vendas — mas <strong>não sabes por onde começar.</strong></li>
+      <li>Tentaste uma ferramenta. Durou uma semana. <strong>Depois ficou por usar.</strong></li>
+    </ul>
+    <p class="pain-close le">That's where a strategy — not another tool — changes everything.</p>
+    <p class="pain-close lp">É aqui que uma estratégia — não mais uma ferramenta — muda tudo.</p>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
