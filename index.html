@@ -3,202 +3,247 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Cátia Effertz — AI Business Strategy, Marketing, Sales & Automation. MIT-certified. 15 years of real business experience. Gothenburg, Sweden.">
-<title>Cátia Effertz · AI Business Consultant</title>
+<meta name="description" content="Cátia Effertz — Consultora de IA Business. Estratégia de Inteligência Artificial e automação de processos para PMEs. Certificada pelo MIT.">
+<title>Cátia Effertz · Consultora de IA Business para PMEs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:opsz,wght@14..32,300..600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#FFFFFF;
-  --bg-alt:#EEF8F8;
-  --ink:#192524;
-  --muted:#3D6463;
-  --faint:#7A9594;
-  --teal:#0ABAB5;
-  --teal-d:#007F7C;
-  --teal-m:#3D9E9B;
-  --surface:#D4EEEC;
-  --border:#A8DFDC;
-  --dark:#0D1F1E;
-  --headline:#004E49;
+  --bg-alt:#F9FBFB;
+  --ink:#111817;
+  --muted:#4A5D5C;
+  --faint:#8AA1A0;
+  --tiffany:#00A8A4; /* Tom turquesa exclusivo ajustado para segurança de marca */
+  --tiffany-hover:#008A87;
+  --brass:#3D9E9B;
+  --surface:#E6F4F3;
+  --border:#E2ECEB;
+  --dark:#0A1211;
+  --headline:#003D39;
   --max:1100px;
   --pad:clamp(1.5rem,5vw,3.5rem);
   --nav-h:64px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16px;}
 img{max-width:100%;display:block;object-fit:cover;}
-a{color:var(--teal);text-decoration:none;}
+a{color:var(--tiffany);text-decoration:none;}
 a:hover{opacity:.7;}
 ul{list-style:none;}
 
-/* ── Language ── */
+/* ── Language Toggle ── */
 .lp{display:none;}
 [data-lang="pt"] .le{display:none!important;}
 [data-lang="pt"] span.lp{display:inline!important;}
-[data-lang="pt"] h1.lp,[data-lang="pt"] h2.lp,[data-lang="pt"] h3.lp,[data-lang="pt"] p.lp,[data-lang="pt"] div.lp,[data-lang="pt"] li.lp{display:block!important;}
+[data-lang="pt"] h1.lp,[data-lang="pt"] h2.lp,[data-lang="pt"] h3.lp,[data-lang="pt"] h4.lp,
+[data-lang="pt"] p.lp,[data-lang="pt"] div.lp,[data-lang="pt"] li.lp{display:block!important;}
 [data-lang="pt"] .lp{display:block;}
 [data-lang="pt"] span.lp{display:inline;}
 
-/* ── Type ── */
-h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.02em;color:var(--headline);}
-.display{font-weight:300;font-size:clamp(2.6rem,5.5vw,4.8rem);line-height:1.04;}
-.display em{font-style:italic;color:var(--teal);}
-h2.sec-title{font-size:clamp(1.8rem,3.8vw,2.9rem);margin-bottom:.35em;}
-h3{font-size:clamp(1rem,1.6vw,1.15rem);}
-p{font-size:1rem;line-height:1.72;}
-p+p{margin-top:.9rem;}
-.lead{font-size:clamp(1rem,1.6vw,1.12rem);color:var(--muted);line-height:1.6;}
-.eyebrow{display:block;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal-m);margin-bottom:.85rem;}
+/* ── Typography ── */
+h1,h2,h3,h4{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.1;letter-spacing:-.02em;color:var(--headline);}
+.display{font-weight:300;font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:1.05;}
+.display em{font-style:italic;color:var(--headline);font-weight:400;}
+h2.sec-title{font-size:clamp(1.8rem,3.8vw,2.6rem);margin-bottom:.4em;font-weight:300;}
+h3{font-size:clamp(1.05rem,1.8vw,1.3rem);font-weight:400;}
+p{font-size:0.95rem;line-height:1.75;color:var(--ink);opacity:0.9;}
+p+p{margin-top:1rem;}
+.lead{font-size:clamp(1rem,1.7vw,1.15rem);color:var(--muted);line-height:1.65;}
+.eyebrow{display:block;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin-bottom:.9rem;}
 strong{font-weight:600;}
-cite{font-style:normal;font-size:.8rem;color:var(--teal);opacity:.85;}
 
 /* ── Layout ── */
 .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad);}
-section{padding:clamp(4rem,9vw,7rem) 0;}
+section{padding:clamp(4.5rem,10vw,7.5rem) 0;}
 section+section{border-top:1px solid var(--border);}
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start;}
-@media(max-width:900px){.two-col{grid-template-columns:1fr;}}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:start;}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+@media(max-width:900px){.two-col,.three-col{grid-template-columns:1fr;}}
 
-/* ── Nav ── */
-nav{position:sticky;top:0;z-index:200;height:var(--nav-h);background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+/* ── Navigation ── */
+nav{position:sticky;top:0;z-index:200;height:var(--nav-h);background:rgba(255,255,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
 .nav-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:100%;display:flex;align-items:center;justify-content:space-between;gap:2rem;}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;font-weight:400;color:var(--ink);}
-.nav-logo span{color:var(--teal);}
-.nav-left-container{display:flex;align-items:center;gap:2rem;}
-.nav-links{display:flex;align-items:center;gap:1.75rem;}
-.nav-links a{font-size:.84rem;font-weight:500;color:var(--muted);letter-spacing:.02em;transition:color .2s;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-style:italic;font-weight:400;color:var(--ink);letter-spacing:-.01em;}
+.nav-logo span{color:var(--tiffany);}
+.nav-links{display:flex;align-items:center;gap:1.8rem;}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;transition:color .2s;}
 .nav-links a:hover{color:var(--ink);opacity:1;}
-.nav-socials{display:flex;align-items:center;gap:0.8rem;margin-left:0.5rem;border-left:1px solid var(--border);padding-left:1rem;}
-.nav-socials svg{width:16px;height:16px;fill:var(--muted);transition:fill .2s;}
-.nav-socials a:hover svg{fill:var(--teal);}
-.lang-btn{background:none;border:1.5px solid var(--teal);border-radius:6px;padding:.5rem 1.1rem;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:500;cursor:pointer;color:var(--teal);transition:all .2s;letter-spacing:.04em;}
-.lang-btn:hover{background:var(--surface);color:var(--teal-d);border-color:var(--teal-d);}
-.lang-btn .active{color:var(--teal-d);font-weight:600;}
-@media(max-width:850px){.nav-links, .nav-socials{display:none;}}
+.lang-btn{background:none;border:1px solid var(--border);border-radius:4px;padding:.45rem .9rem;font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;cursor:pointer;color:var(--muted);transition:all .2s;letter-spacing:.05em;}
+.lang-btn:hover{background:var(--bg-alt);color:var(--ink);border-color:var(--faint);}
+.lang-btn .active{color:var(--tiffany);font-weight:700;}
+@media(max-width:900px){.nav-links{display:none;}}
 
-/* ── Hero ── */
-#home{padding:clamp(5rem,12vw,9rem) 0 clamp(3.5rem,8vw,6rem);border-top:none!important;}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;}
-.hero-content .display{margin-bottom:1.25rem;}
-.hero-sub{font-size:clamp(1rem,1.6vw,1.12rem);color:var(--muted);line-height:1.65;max-width:500px;margin-bottom:.75rem;}
-.hero-services{font-size:.82rem;color:var(--teal-m);font-weight:500;letter-spacing:.04em;margin-bottom:2rem;}
-.btn-group{display:flex;gap:.9rem;flex-wrap:wrap;}
-.btn{display:inline-block;background:var(--teal);color:#fff!important;padding:.85rem 2rem;border-radius:3px;font-size:.875rem;font-weight:600;letter-spacing:.04em;transition:background .2s;opacity:1!important;}
-.btn:hover{background:var(--teal-d);}
-.btn-ghost{display:inline-block;color:var(--ink)!important;padding:.85rem 2rem;border:1.5px solid var(--border);border-radius:3px;font-size:.875rem;font-weight:600;letter-spacing:.04em;transition:all .2s;opacity:1!important;}
-.btn-ghost:hover{border-color:var(--ink);}
+/* ── Buttons ── */
+.btn-tiffany{display:inline-block;background:var(--tiffany);color:var(--dark)!important;padding:.9rem 2.2rem;border-radius:4px;font-size:.85rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;}
+.btn-tiffany:hover{background:var(--tiffany-hover);transform:translateY(-1px);}
+.btn-ghost{display:inline-block;color:var(--ink)!important;padding:.9rem 2.2rem;border:1px solid var(--faint);border-radius:4px;font-size:.85rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:all .2s;}
+.btn-ghost:hover{border-color:var(--ink);background:var(--bg-alt);}
 
-.hero-image-container {
+/* ── Hero (SEO-Optimized) ── */
+#home{padding:clamp(5rem,12vw,8rem) 0 clamp(4rem,9vw,6.5rem);border-top:none!important;}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center;}
+.hero-content .display{margin-bottom:1.5rem;}
+.hero-sub{font-size:clamp(1rem,1.7vw,1.12rem);color:var(--muted);line-height:1.7;max-width:520px;margin-bottom:2.5rem;}
+
+.hero-photo-container {
   width: 100%;
   aspect-ratio: 4/5;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.03);
 }
-.hero-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
-@media(max-width:800px){.hero-grid{grid-template-columns:1fr;}}
-
-/* ── Services ── */
-#services{background:var(--bg-alt);}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
-.svc-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
-.svc-body{padding:1.5rem 1.25rem;}
-.svc-body h3{font-size:1.15rem;color:var(--headline);margin-bottom:0.6rem;}
-.svc-body p{font-size:.88rem;color:var(--muted);line-height:1.55;}
-@media(max-width:900px){.svc-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.svc-grid{grid-template-columns:1fr;}}
-
-/* ── About ── */
-.about-photo-container {
-  width: 100%;
-  aspect-ratio: 3/4;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-.about-photo-container img {
+.hero-photo-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-.about-text p{font-size:1rem;line-height:1.7;max-width:500px;}
-.about-text p+p{margin-top:1rem;}
-.about-text .closer{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;font-style:italic;color:var(--headline);margin-top:1.5rem;line-height:1.35;display:block;}
+.hero-proof{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-top:2rem;}
+.proof-card{background:var(--bg-alt);border:1px solid var(--border);border-radius:6px;padding:1.4rem;}
+.proof-n{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:400;color:var(--headline);line-height:1;margin-bottom:.4rem;}
+.proof-l{font-size:.8rem;color:var(--muted);line-height:1.5;}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr;}.hero-photo-container{max-width:450px;margin:0 auto;}}
+
+/* ── Challenges Section ── */
+#challenges{background:var(--bg-alt);}
+.pain-list{list-style:none;margin-top:2rem;}
+.pain-list li{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:300;color:var(--headline);line-height:1.5;padding:1.1rem 0;border-bottom:1px solid var(--border);position:relative;padding-left:1.8rem;}
+.pain-list li::before{content:'—';position:absolute;left:0;color:var(--tiffany);font-weight:300;}
+.pain-list li strong{font-weight:500;}
+.pain-list li em{font-style:italic;color:var(--brass);}
+.pain-close{margin-top:2rem;font-size:0.95rem;color:var(--muted);letter-spacing:0.01em;}
+
+/* ── About ── */
+.about-story{max-width:540px;}
+.about-story .chapter{margin-bottom:1.5rem;}
+.about-story .wry{font-style:italic;color:var(--faint);font-size:0.9rem;}
+.about-story .closer{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;font-style:italic;color:var(--headline);margin-top:2rem;display:block;}
+
+.about-photo-container {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  margin-bottom: 1.5rem;
+}
+.about-photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tl-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-top:2.5rem;background:var(--bg);}
+.tl-item{padding:1.1rem .8rem;text-align:center;border-right:1px solid var(--border);}
+.tl-item:last-child{border-right:none;}
+.tl-n{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--headline);line-height:1.2;}
+.tl-l{font-size:.68rem;color:var(--muted);line-height:1.4;margin-top:.4rem;letter-spacing:0.02em;}
+@media(max-width:900px){.tl-strip{grid-template-columns:repeat(3,1fr);}.tl-item:nth-child(3){border-right:none;}.tl-item:nth-child(4),.tl-item:nth-child(5){border-top:1px solid var(--border);}}
+
+/* ── Services (5 columns grid for services) ── */
+.svc-intro{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-bottom:3.5rem;}
+.five-col{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;}
+.svc-card{background:var(--bg);padding:2rem 1.3rem;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:0.7rem;}
+.svc-card:last-child{border-right:none;}
+.svc-icon{font-size:1.3rem;color:var(--brass);}
+.svc-card h3{font-size:1.05rem;font-weight:400;color:var(--headline);line-height:1.3;}
+.svc-card p{font-size:.84rem;color:var(--muted);line-height:1.6;}
+@media(max-width:1024px){.five-col{grid-template-columns:repeat(3,1fr);}.svc-card:nth-child(3){border-right:none;}.svc-card:nth-child(4),.svc-card:nth-child(5){border-top:1px solid var(--border);}}
+@media(max-width:768px){.five-col{grid-template-columns:1fr 1fr;}.svc-card{border-right:1.5px solid var(--border)!important;border-bottom:1px solid var(--border);}.svc-card:nth-child(2n){border-right:none!important;}}
+@media(max-width:480px){.five-col{grid-template-columns:1fr;}.svc-card{border-right:none!important;}}
 
 /* ── Portfolio ── */
-.port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem;}
-.port-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.5rem;display:flex;flex-direction:column;gap:.5rem;}
-.port-tag{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-m);}
-.port-card h3{font-size:1.1rem;line-height:1.3;}
-.port-card p{font-size:.86rem;color:var(--muted);line-height:1.55;margin-bottom:0.5rem;}
-.pills{display:flex;flex-wrap:wrap;gap:.35rem;}
-.pill{font-size:.65rem;font-weight:600;padding:.25rem .6rem;background:var(--surface);border:1px solid var(--border);border-radius:40px;color:var(--muted);}
-@media(max-width:760px){.port-grid{grid-template-columns:1fr;}}
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;}
+.port-card{background:var(--bg);border:1px solid var(--border);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.2s;}
+.port-img{width:100%;height:170px;object-fit:cover;}
+.port-body{padding:1.6rem;display:flex;flex-direction:column;gap:.7rem;flex:1;}
+.port-tag{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);}
+.port-card h3{font-size:1.15rem;font-weight:400;line-height:1.35;}
+.port-card p{font-size:.86rem;color:var(--muted);line-height:1.6;flex:1;}
+.port-stat{font-size:.76rem;color:var(--headline);font-weight:500;padding-top:.85rem;border-top:1px solid var(--border);letter-spacing:0.01em;}
+.pills{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.2rem;}
+.pill{font-size:.65rem;font-weight:500;padding:.25rem .65rem;background:var(--bg-alt);border:1px solid var(--border);border-radius:4px;color:var(--muted);}
+@media(max-width:900px){.port-grid{grid-template-columns:1fr;}}
 
-/* ── Magazine ── */
+/* ── Blog Magazine ── */
 #blog{background:var(--bg-alt);}
-.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.5rem;}
-.art-card{border-radius:8px;overflow:hidden;border:1px solid var(--border);background:var(--bg);padding:1.5rem;display:flex;flex-direction:column;}
-.art-meta{font-size:.67rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:.65rem;}
-.art-card h3{font-size:1.15rem;line-height:1.25;margin-bottom:.75rem;color:var(--headline);}
-.art-card p{font-size:.88rem;color:var(--muted);line-height:1.6;}
+.blog-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;margin-top:3rem;max-width:850px;margin-left:auto;margin-right:auto;}
+.art-card{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:2.5rem;display:flex;flex-direction:column;gap:1rem;transition:all 0.3s ease;}
+.art-meta{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);}
+.art-card h3{font-size:1.6rem;font-weight:400;color:var(--headline);line-height:1.2;}
+.art-preview{font-size:.95rem;color:var(--muted);line-height:1.7;}
+.art-content{display:none;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border);animation:fadeIn 0.4s ease-in-out;}
+.art-content p{font-size:.95rem;line-height:1.75;color:var(--ink);margin-bottom:1.2rem;}
+.art-content p:last-child{margin-bottom:0;}
+.art-card.open .art-content{display:block;}
+.art-card.open .art-preview{display:none;}
+.read-btn{align-self:flex-start;display:inline-block;margin-top:.5rem;font-size:.78rem;font-weight:600;color:var(--ink);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;background:none;border:none;padding:.5rem 0;border-bottom:1.5px solid var(--tiffany);font-family:inherit;transition:all 0.2s;}
+.read-btn:hover{color:var(--tiffany-hover);border-color:var(--ink);}
+@keyframes fadeIn { from{opacity:0;transform:translateY(5px);} to{opacity:1;transform:translateY(0);} }
 
 /* ── Contact ── */
-#contact{background:var(--dark);padding-bottom:4rem;}
-#contact .eyebrow{color:var(--teal-m);}
+#contact{background:var(--dark);color:#fff;}
+#contact .eyebrow{color:var(--brass);}
 #contact .sec-title{color:#fff;}
 .contact-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start;}
-#contact p{color:rgba(255,255,255,.65);}
-.c-links{display:flex;flex-direction:column;gap:.9rem;margin-top:1.75rem;}
-.c-link{display:flex;flex-direction:column;gap:.2rem;padding:1.1rem 1.25rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:6px;color:#fff!important;opacity:1!important;transition:background .2s;}
-.c-link:hover{background:rgba(255,255,255,.11);}
-.c-lbl{font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.32);}
-.c-val{font-size:.9rem;font-weight:500;color:#fff;}
-.c-social-row{display:flex;gap:1rem;margin-top:1rem;}
-.c-social-btn{display:flex;align-items:center;gap:0.5rem;padding:0.75rem 1.25rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:6px;color:#fff;font-size:0.85rem;transition:all .2s;}
-.c-social-btn svg{width:16px;height:16px;fill:#fff;}
-.c-social-btn:hover{background:var(--teal);border-color:var(--teal);}
+#contact p{color:rgba(255,255,255,.7);font-size:0.95rem;}
+.c-links{display:flex;flex-direction:column;gap:.9rem;margin-top:2rem;}
+.c-link{display:flex;flex-direction:column;gap:.2rem;padding:1.2rem 1.5rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:4px;color:#fff!important;transition:all .2s;}
+.c-link:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.15);}
+.c-lbl{font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.4);}
+.c-val{font-size:.95rem;font-weight:500;color:#fff;letter-spacing:0.02em;}
+.avail{display:flex;align-items:center;gap:.6rem;margin-top:2rem;}
+.avail-dot{width:7px;height:7px;background:var(--tiffany);border-radius:50%;animation:pulse 2.4s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(0.9);}}
+.avail-text{font-size:.8rem;color:rgba(255,255,255,.45);letter-spacing:0.02em;}
 @media(max-width:760px){.contact-layout{grid-template-columns:1fr;gap:2.5rem;}}
 
-/* ── Footer ── */
-footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.07);padding:1.5rem 0;}
-.foot-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;}
-.foot-logo{font-family:'Cormorant Garamond',serif;font-size:.95rem;font-style:italic;color:rgba(255,255,255,.28);}
-.foot-logo span{color:var(--teal);}
-.foot-copy{font-size:.74rem;color:rgba(255,255,255,.24);}
+.c-link-wa-tiffany{background:rgba(0,168,164,.08)!important;border-color:var(--tiffany)!important;}
+.c-link-wa-tiffany:hover{background:rgba(0,168,164,.18)!important;border-color:var(--tiffany-hover)!important;}
+
+/* Floating Discovery CTA */
+.wa-float{
+  position:fixed;bottom:2rem;right:2rem;z-index:999;
+  display:flex;align-items:center;gap:.6rem;
+  background:var(--tiffany);color:var(--dark)!important;
+  padding:.8rem 1.4rem;
+  border-radius:4px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  font-family:'Inter',sans-serif;font-size:.8rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;
+  transition:all .2s;
+}
+.wa-float:hover{transform:translateY(-2px);background:var(--tiffany-hover);}
+.wa-float svg{width:16px;height:16px;fill:var(--dark);flex:0 0 auto;}
+@media(max-width:560px){.wa-float span{display:none;}.wa-float{padding:.85rem;border-radius:50%;bottom:1.5rem;right:1.5rem;}}
+
+/* Footer */
+footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.05);padding:2.5rem 0;}
+.foot-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.4);}
+.foot-logo span{color:var(--tiffany);}
+.foot-links{display:flex;gap:1.8rem;font-size:0.85rem;align-items:center;}
+.foot-links a{color:rgba(255,255,255,0.6);display:flex;align-items:center;gap:0.5rem;transition:color .2s;}
+.foot-links a:hover{color:var(--tiffany);}
+.foot-links svg{width:16px;height:16px;fill:currentColor;}
+.foot-copy{font-size:.74rem;color:rgba(255,255,255,.3);letter-spacing:0.02em;}
 </style>
 </head>
 <body>
 
+<!-- NAVIGATION -->
 <nav>
   <div class="nav-in">
-    <div class="nav-left-container">
-      <a href="#home" class="nav-logo">Cátia<span>.</span></a>
-      <ul class="nav-links">
-        <li><a href="#services"><span class="le">Services</span><span class="lp">Serviços</span></a></li>
-        <li><a href="#about"><span class="le">About</span><span class="lp">Sobre</span></a></li>
-        <li><a href="#portfolio"><span class="le">Work</span><span class="lp">Trabalho</span></a></li>
-        <li><a href="#blog">Magazine</a></li>
-        <li><a href="#contact"><span class="le">Contact</span><span class="lp">Contacto</span></a></li>
-      </ul>
-      <div class="nav-socials">
-        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-        </a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9m0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5m4.75-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
-        </a>
-      </div>
-    </div>
+    <a href="#home" class="nav-logo">Cátia<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about"><span class="le">About</span><span class="lp">Sobre</span></a></li>
+      <li><a href="#services"><span class="le">Who I help</span><span class="lp">Especialidades</span></a></li>
+      <li><a href="#portfolio"><span class="le">Work</span><span class="lp">Trabalho</span></a></li>
+      <li><a href="#blog">Magazine</a></li>
+      <li><a href="#contact"><span class="le">Contact</span><span class="lp">Contacto</span></a></li>
+    </ul>
     <button class="lang-btn" onclick="toggleLang()">
       <span id="lbl-en">EN</span>&nbsp;/&nbsp;<span id="lbl-pt" class="active">PT</span>
     </button>
@@ -207,153 +252,315 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.07);padding
 
 <main>
 
+<!-- HERO SECTION -->
 <section id="home">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-content">
-        <span class="eyebrow"><span class="le">AI Business Consultant · MIT Professional Education · Gothenburg, Sweden</span><span class="lp">Consultora de IA Business · MIT Professional Education · Gotemburgo, Suécia</span></span>
-        <h1 class="display le">You don't need<br>another AI tool.<br>You need <em>a strategy.</em></h1>
-        <h1 class="display lp">Não precisas de<br>mais uma ferramenta.<br>Precisas de <em>uma estratégia.</em></h1>
-        <p class="hero-sub le">I diagnose your business, identify where AI creates real value, and build the systems that deliver it.</p>
-        <p class="hero-sub lp">Analiso o teu negócio, identifico onde a IA cria valor real, e construo os sistemas que o entregam.</p>
-        <p class="hero-services le">Strategy · Marketing &amp; Sales · Automation · Data Analysis · Training</p>
-        <p class="hero-services lp">Estratégia · Marketing &amp; Vendas · Automação · Análise de Dados · Formação</p>
+        <span class="eyebrow">
+          <span class="le">AI Business Consultant · MIT Professional Education</span>
+          <span class="lp">Estratégia de Inteligência Artificial para PMEs</span>
+        </span>
+        <h1 class="display le">I start with<br>your challenge.<br>Not with <em>the tool.</em></h1>
+        <h1 class="display lp">Começo pelo<br>seu desafio.<br>Não pela <em>ferramenta.</em></h1>
+        <p class="hero-sub le">Fifteen years of running real businesses. MIT-certified in AI. Based in Gothenburg, Sweden. I engineer tailored workflows and AI backend systems that protect your data and scale your operation.</p>
+        <p class="hero-sub lp">Quinze anos de experiência na gestão de negócios reais. Certificada em IA e Machine Learning pelo MIT. Sediada em Gotemburgo, Suécia. Desenho fluxos de trabalho e arquiteturas de automação que protegem os seus dados e escalam a sua operação.</p>
         <div class="btn-group">
-          <a href="https://wa.me/41765837353?text=Ol%C3%A1%20C%C3%A1tia%2C%20quero%20agendar%2030%20minutos%20gratuitos." target="_blank" rel="noopener" class="btn"><span class="le">Book 30 free minutes</span><span class="lp">Agenda 30 minutos gratuitos</span></a>
+          <a href="https://wa.me/41765837353?text=Ol%C3%A1%20C%C3%A1tia%2C%20gostaria%20de%20agendar%20a%20chamada%20gratuita%20de%2030%20minutos%20para%20avaliar%20os%20desafios%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener" class="btn-tiffany">
+            <span class="le">Book Free 30-Min Call</span><span class="lp">Chamada Gratuita 30 Min</span>
+          </a>
           <a href="#portfolio" class="btn-ghost"><span class="le">See the work</span><span class="lp">Ver o trabalho</span></a>
         </div>
       </div>
       <div>
-        <div class="hero-image-container">
-          <img src="catia.png" alt="Cátia Effertz">
+        <div class="hero-photo-container">
+          <img src="catia.png" alt="Cátia Effertz — Consultora de IA Business e Automação para PMEs">
         </div>
+      </div>
+    </div>
+    
+    <div class="hero-proof">
+      <div class="proof-card">
+        <div class="proof-n">2008</div>
+        <div class="proof-l"><strong><span class="le">First business opened.</span><span class="lp">Primeiro negócio fundado.</span></strong> <span class="le">Jewellery retail since age 18. Founded Tejo D'Ouro, followed by Grazza Portugal, and now building Grace Jewellery Atelier with systemic efficiency.</span><span class="lp">Setor da joalharia desde os 18 anos. Fundou a Tejo D'Ouro, seguida da Grazza Portugal, liderando atualmente a Grace Jewellery Atelier com máxima eficiência sistémica.</span></div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-n">€100K</div>
+        <div class="proof-l"><strong><span class="le">Revenue in 90 days</span><span class="lp">Faturamento em 90 dias</span></strong> <span class="le">at physical retail store. Three locations at peak. One founder balancing real operational overhead.</span><span class="lp">em unidade de retalho físico. Três localizações em simultâneo no pico da operação. Uma fundadora a gerir a fricção diária.</span></div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-n">665</div>
+        <div class="proof-l"><strong><span class="le">Orders on Grace Jewellery Atelier</span><span class="lp">Encomendas na Grace Jewellery Atelier</span></strong> — <span class="le">€20,900 revenue, zero paid advertising. Built exclusively on high-touch conversational systems.</span><span class="lp">€20.900 de faturação, com total ausência de publicidade paga. Crescimento assente em sistemas de conversão.</span></div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-n">MIT</div>
+        <div class="proof-l"><strong><span class="le">AI & ML certified, 2026.</span><span class="lp">Certificação IA & ML, 2026.</span></strong> <span class="le">Production AI architectures engineered for strict business data privacy and high ROI.</span><span class="lp">Arquiteturas de Inteligência Artificial de nível de produção focadas em privacidade estrita de dados e ROI técnico.</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="services">
-  <div class="wrap">
-    <span class="eyebrow"><span class="le">Expertise</span><span class="lp">Especialidades</span></span>
-    <h2 class="sec-title"><span class="le">Strategic AI Integration</span><span class="lp">Integração Estratégica de IA</span></h2>
-    <div class="svc-grid">
-      <div class="svc-card">
-        <div class="svc-body">
-          <h3><span class="le">AI Business Strategy</span><span class="lp">Estratégia de Negócios IA</span></h3>
-          <p class="le">Custom technical blueprints mapping operations to high-ROI AI architectures, eliminating guesswork.</p>
-          <p class="lp">Planos técnicos personalizados mapeando operações para arquiteturas de IA com alto ROI, eliminando suposições.</p>
-        </div>
-      </div>
-      <div class="svc-card">
-        <div class="svc-body">
-          <h3><span class="le">Process Automation</span><span class="lp">Automação de Processos</span></h3>
-          <p class="le">Building scalable, resilient backend connections and self-healing agentic workflows using n8n and Make.</p>
-          <p class="lp">Construção de conexões robustas no ecossistema técnico e fluxos autónomos resilientes usando n8n e Make.</p>
-        </div>
-      </div>
-      <div class="svc-card">
-        <div class="svc-body">
-          <h3><span class="le">Training & Leadership</span><span class="lp">Formação e Liderança</span></h3>
-          <p class="le">Upskilling internal engineering and operations teams to securely maintain deployed intelligence.</p>
-          <p class="lp">Capacitação técnica das equipas internas para gerir e manter inteligência artificial de forma segura.</p>
-        </div>
-      </div>
-    </div>
+<!-- CHALLENGES SECTION -->
+<section id="challenges">
+  <div class="wrap" style="max-width:780px">
+    <span class="eyebrow"><span class="le">Does this sound familiar?</span><span class="lp">Identifica-se com este cenário?</span></span>
+    <ul class="pain-list le">
+      <li>You answer the same operational questions <strong>every single day.</strong></li>
+      <li>Your best strategic hours go to tasks that <strong>shouldn't need you at all.</strong></li>
+      <li>You tried a generic AI tool. It was impressive for a week. <strong>Then it sat unused.</strong></li>
+      <li>You hear that <em>"AI can help your business"</em> — but nobody explains <strong>exactly how, for you.</strong></li>
+    </ul>
+    <ul class="pain-list lp">
+      <li>Responde às mesmas questões repetitivas e operacionais <strong>todos os dias.</strong></li>
+      <li>As suas melhores horas estratégicas são consumidas por tarefas que <strong>não deveriam depender da sua atenção.</strong></li>
+      <li>Testou uma ferramenta genérica de IA. Revelou-se interessante na primeira semana, <strong>mas acabou esquecida.</strong></li>
+      <li>Ouve dizer que a <em>"IA pode transformar o seu negócio"</em> — contudo, ninguém lhe explica <strong>exatamente como, na sua realidade.</strong></li>
+    </ul>
+    <p class="pain-close le">If you nodded even once — that's the exact operational challenge we solve.</p>
+    <p class="pain-close lp">Se houve concordância com algum destes pontos — é precisamente esse desafio operacional que solucionamos.</p>
   </div>
 </section>
 
+<!-- ABOUT SECTION -->
 <section id="about">
   <div class="wrap">
     <div class="two-col">
-      <div class="about-photo-container">
-        <img src="n8n.png" alt="Automation Workflows">
+      <div>
+        <span class="eyebrow"><span class="le">About me</span><span class="lp">Sobre mim</span></span>
+        <h2 class="sec-title le">I didn't start in AI.<br>I started with operational reality.</h2>
+        <h2 class="sec-title lp">Não comecei na tecnologia.<br>Comecei na realidade operacional.</h2>
+
+        <div class="about-story le" style="margin-top:1.5rem">
+          <div class="chapter">
+            <p>I spent fifteen years founding and expanding real-world physical and digital businesses—from luxury custom jewelry design ateliers to highly competitive international marketing environments like Dubai.</p>
+            <p>I know what it means to be the bottleneck, to manage cash flow, and to watch high-value strategic growth get eaten away by repetitive operational overhead.</p>
+          </div>
+          <div class="chapter">
+            <p>My transition into artificial intelligence wasn't driven by tech hype, but by a need for absolute business efficiency. In 2026, I completed technical specializations at MIT Professional Education, focusing on no-code AI architectures, data science, and production-grade automation systems.</p>
+            <p>Today, I bridge the gap between cutting-edge machine learning capabilities and the pragmatic needs of modern solopreneurs, clinics, and professional firms.</p>
+          </div>
+          <p class="closer">I don't sell tools. I architect space, time, and scale.</p>
+        </div>
+
+        <div class="about-story lp" style="margin-top:1.5rem">
+          <div class="chapter">
+            <p>Dediquei quinze anos à fundação e expansão de empresas reais, no ecossistema físico e digital — desde a criação de marcas de raíz como a Tejo D'Ouro e Grazza Portugal até ao desenvolvimento técnico e curadoria da Grace Jewellery Atelier, operando também em mercados de elevada exigência internacional como o Dubai.</p>
+            <p>Compreendo perfeitamente o impacto de ser o principal estrangulamento da própria operação, gerir fluxos de tesouraria e observar o crescimento estratégico ser absorvido por rotinas operacionais diárias.</p>
+          </div>
+          <div class="chapter">
+            <p>A minha transição para a inteligência artificial não teve origem em modas tecnológicas, mas sim na necessidade de alcançar eficiência absoluta. Em 2026, especializei-me a nível técnico no MIT Professional Education, com foco em arquiteturas de IA no-code, ciência de dados e sistemas de automação resilientes.</p>
+            <p>Atualmente, estabeleço a ponte entre o potencial dos modelos avançados e as necessidades pragmáticas de profissionais independentes, clínicas e empresas de serviços de excelência.</p>
+          </div>
+          <p class="closer">Não comercializo ferramentas isoladas. Desenho espaço, tempo e escala.</p>
+        </div>
+
+        <div class="tl-strip">
+          <div class="tl-item"><div class="tl-n">Tejo D Ouro</div><div class="tl-l"><span class="le">First Brand</span><span class="lp">1ª Marca</span></div></div>
+          <div class="tl-item"><div class="tl-n">Mestrado</div><div class="tl-l"><span class="le">Management &amp; Policy</span><span class="lp">Gestão e Pol. Públicas</span></div></div>
+          <div class="tl-item"><div class="tl-n">Grazza</div><div class="tl-l"><span class="le">Portugal</span><span class="lp">Expansão</span></div></div>
+          <div class="tl-item"><div class="tl-n">Grace</div><span class="le">Jewellery Atelier</span><span class="lp">Jewellery Atelier</span></div>
+          <div class="tl-item"><div class="tl-n">MIT</div><div class="tl-l">IA & ML · 2026</div></div>
+        </div>
       </div>
-      <div class="about-text">
-        <span class="eyebrow"><span class="le">My Journey</span><span class="lp">A minha jornada</span></span>
-        <h2 class="sec-title"><span class="le">15 years of real business experience</span><span class="lp">15 anos de experiência real de negócio</span></h2>
-        <p class="le">I focus on the technical architecture of AI systems and automated workflows designed to assist clinics, human resources, and solopreneurs.</p>
-        <p class="lp">Foco-me na arquitetura técnica de sistemas de IA e fluxos de trabalho automatizados desenhados para ajudar clínicas, recursos humanos e solopreneurs.</p>
-        <span class="closer">Cátia Effertz</span>
+
+      <div class="photo-side" style="margin-top:1rem">
+        <div class="about-photo-container">
+          <img src="n8n.png" alt="Arquitetura de Automação de Sistemas com Inteligência Artificial">
+        </div>
+        <div style="background:var(--bg-alt);border:1px solid var(--border);border-radius:6px;padding:1.4rem;">
+          <div class="eyebrow" style="margin-bottom:.6rem"><span class="le">Credentials</span><span class="lp">Credenciais</span></div>
+          <p style="font-size:.9rem;font-weight:500;color:var(--ink)">MIT Professional Education</p>
+          <p style="font-size:.82rem;color:var(--muted);margin-top:.15rem">No-Code AI, Machine Learning &amp; Data Science · 2026</p>
+          <p style="font-size:.9rem;font-weight:500;color:var(--ink);margin-top:.85rem"><span class="le">Master's Degree in Management</span><span class="lp">Mestrado em Gestão e Políticas Públicas</span></p>
+          <p style="font-size:.82rem;color:var(--muted);margin-top:.15rem">ISCSP, Universidade de Lisboa</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SERVICES / INTENT SECTION (Updated to 5 columns grid) -->
+<section id="services">
+  <div class="wrap">
+    <div class="svc-intro">
+      <div>
+        <span class="eyebrow"><span class="le">Solutions</span><span class="lp">Estratégia e ROI</span></span>
+        <h2 class="sec-title le">Estratégia de Inteligência Artificial para PMEs</h2>
+        <h2 class="sec-title lp">Como automatizar tarefas repetitivas na sua empresa com IA?</h2>
+      </div>
+      <p class="lead le">I have engineered workflows and backend systems tailored precisely for elite solopreneurs, high-touch clinics, and organizations looking to substitute hours for software intelligence.</p>
+      <p class="lead lp">A resposta para eliminar a fricção operacional reside no desenho de fluxos de trabalho inteligentes no-code. Interceptamos dados na camada de API utilizando ferramentas robustas como n8n e Make.com, executando processos complexos em segundo plano de forma autónoma e segura.</p>
+    </div>
+    <div class="five-col">
+      <div class="svc-card">
+        <div class="svc-icon">🎯</div>
+        <h3><span class="le">Business & Social Strategy</span><span class="lp">Análise Estratégica & Redes</span></h3>
+        <p class="le">Data-driven business analysis combined with social commerce architecture to align your content, funnel, and operations.</p>
+        <p class="lp">Auditoria integral do modelo de negócio acoplada à engenharia de funis para Instagram, TikTok e Pinterest, alinhando narrativa de marca e conversão orgânica.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🏬</div>
+        <h3><span class="le">Small businesses</span><span class="lp">Automação de Processos IA</span></h3>
+        <p class="le">Your week is full of tasks that shouldn't need you. Let's identify the three that AI can own — and give you your hours back.</p>
+        <p class="lp">A sua semana encontra-se sobrecarregada com funções que não deveriam depender de si. Identificamos os nós de elevado retorno onde a tecnologia pode operar sem intervenção humana.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🏥</div>
+        <h3><span class="le">Health & clinics</span><span class="lp">IA para Clínicas e Marcações</span></h3>
+        <p class="le">Patients booking, cancelling, asking the same questions. Your team's expertise should go to care — not to admin that a well-built AI can handle in seconds.</p>
+        <p class="lp">Triagem de pacientes, agendamentos e respostas recorrentes. A especialização da sua equipa médica deve focar-se no cuidado — delegando a burocracia a um sistema inteligente.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🛍️</div>
+        <h3><span class="le">E-commerce brands</span><span class="lp">Chatbots para WhatsApp e CRM</span></h3>
+        <p class="le">Customers decide at 11pm on Sundays. If you're not there — with an answer, in your voice — you lose them. AI closes that gap without you losing sleep.</p>
+        <p class="lp">Os consumidores tomam decisões aos domingos à noite. Criamos assistentes automatizados que utilizam rigorosamente o tom de voz da sua marca e gravam as informações direto no seu CRM.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">🚀</div>
+        <h3><span class="le">Solo founders</span><span class="lp">Privacidade de Dados em PMEs</span></h3>
+        <p class="le">When you are the business, your time is the ceiling. AI doesn't replace your judgment — it buys you the room to actually use it.</p>
+        <p class="lp">Garantimos a conformidade estrita com o RGPD. Desenvolvemos bases de conhecimento internas encriptadas para que os seus dados de faturação e clientes permaneçam 100% seguros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
 <section id="portfolio">
   <div class="wrap">
-    <span class="eyebrow"><span class="le">Case Studies</span><span class="lp">Estudos de Caso</span></span>
-    <h2 class="sec-title"><span class="le">Systems in Action</span><span class="lp">Sistemas em Ação</span></h2>
+    <span class="eyebrow"><span class="le">Selected work</span><span class="lp">Trabalho selecionado</span></span>
+    <h2 class="sec-title le">Architected. Deployed. Resilient.</h2>
+    <h2 class="sec-title lp">Desenhado. Implementado. Resiliente.</h2>
     <div class="port-grid">
+
       <div class="port-card">
-        <span class="port-tag"><span class="le">Automation</span><span class="lp">Automação</span></span>
-        <h3><span class="le">Automating Public Notice Tracking</span><span class="lp">Rastreamento Automatizado de Editais</span></h3>
-        <p class="le">Architected a production-grade workflow for an accounting firm to continuously scrape, extract, and summarize local funding notices using LLMs.</p>
-        <p class="lp">Desenho de um fluxo robusto para uma empresa de contabilidade monitorizar, extrair e resumir avisos de fundos públicos através de LLMs.</p>
-        <div class="pills">
-          <span class="pill">n8n</span>
-          <span class="pill">OpenAI API</span>
-          <span class="pill">Web Scraping</span>
+        <img class="port-img" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&q=75&fit=crop" alt="Grace Jewellery Atelier — Auditoria de Sistema de IA" loading="lazy">
+        <div class="port-body">
+          <div class="port-tag"><span class="le">AI Business Strategy</span><span class="lp">Estratégia de IA</span></div>
+          <h3><span class="le">Grace Jewellery Atelier — Systemic Audit</span><span class="lp">Grace Jewellery Atelier — Auditoria de Sistema</span></h3>
+          <p class="le">Full architectural blueprint for an e-commerce operation—mapping workflows to high-ROI AI nodes, including a customized RAG infrastructure running on historical transaction data.</p>
+          <p class="lp">Plano estrutural para operação digital — mapeamento de fluxos de trabalho para nós de IA de elevado ROI, incluindo infraestrutura RAG customizada assente em dados transacionais históricos.</p>
+          <div class="port-stat le">665 orders · €20,900 revenue · Organic Scale</div>
+          <div class="port-stat lp">665 encomendas · €20.900 faturação · Escala Orgânica</div>
+          <div class="pills"><span class="pill">Estratégia de IA</span><span class="pill">Knowledge Base</span><span class="pill">RAG</span></div>
         </div>
       </div>
+
       <div class="port-card">
-        <span class="port-tag"><span class="le">AI Agents</span><span class="lp">Agentes de IA</span></span>
-        <h3><span class="le">Multi-Agent Clinician Assistant</span><span class="lp">Assistente Multi-Agente para Clínicas</span></h3>
-        <p class="le">Deployed an autonomous multi-agent system managing patient onboarding intake diagnostics and automated CRM synching securely.</p>
-        <p class="lp">Implementação de um sistema multi-agente autónomo para gerir a triagem inicial de pacientes e sincronização segura com o CRM.</p>
-        <div class="pills">
-          <span class="pill">Make.com</span>
-          <span class="pill">LangChain</span>
-          <span class="pill">HIPAA Security</span>
+        <img class="port-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=75&fit=crop" alt="Agente de Triagem e Marcação Clínica com IA" loading="lazy">
+        <div class="port-body">
+          <div class="port-tag"><span class="le">AI Agents · Production</span><span class="lp">Agentes de IA · Produção</span></div>
+          <h3><span class="le">Clinician Scheduling &amp; Intake Agent</span><span class="lp">Agente de Triagem e Marcação Clínica</span></h3>
+          <p class="le">An autonomous, state-aware patient concierge deployed via n8n. Secures internal synchronization with CRMs, handles multi-turn booking queries, and enforces strict operational parameters.</p>
+          <p class="lp">Desenvolvimento de um concierge de pacientes autónomo implementado via n8n. Sincronização segura em tempo real com sistemas de CRM, gestão inteligente de agendamentos e validação estrita de parâmetros operacionais.</p>
+          <div class="port-stat le">24/7 Engine · PostgreSQL State · Zero Latency</div>
+          <div class="port-stat lp">Motor 24/7 · Estado em PostgreSQL · Latência Zero</div>
+          <div class="pills"><span class="pill">n8n</span><span class="pill">Integração WhatsApp</span><span class="pill">PostgreSQL</span></div>
         </div>
       </div>
+
+      <div class="port-card">
+        <img class="port-img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=75&fit=crop" alt="Automação de Rastreamento de Editais Públicos" loading="lazy">
+        <div class="port-body">
+          <div class="port-tag"><span class="le">Automation · Production Workflow</span><span class="lp">Automação · Fluxo de Produção</span></div>
+          <h3><span class="le">Public Tender Tracking Engine</span><span class="lp">Automação de Rastreamento de Editais</span></h3>
+          <p class="le">Engineered a pipeline for a financial firm that automates the web scraping, structural extraction, and semantic summarizing of public funding notices using advanced LLMs.</p>
+          <p class="lp">Construção de uma pipeline para uma empresa de contabilidade que automatiza a monitorização, extração estrutural e resumo semântico de editais de fundos públicos via LLMs.</p>
+          <div class="port-stat le">Resilient Scraper · Automated Summarization</div>
+          <div class="port-stat lp">Scraping Resiliente · Sumarização Automatizada</div>
+          <div class="pills"><span class="pill">n8n</span><span class="pill">Make.com</span><span class="pill">LLM Mining</span></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
+<!-- BLOG MAGAZINE (SEO / AEO Engine) -->
 <section id="blog">
   <div class="wrap">
     <span class="eyebrow">Magazine</span>
-    <h2 class="sec-title"><span class="le">Insights on Artificial Intelligence</span><span class="lp">Perspetivas sobre Inteligência Artificial</span></h2>
+    <h2 class="sec-title le">Deep dives into systems architecture and efficiency.</h2>
+    <h2 class="sec-title lp">Análises aprofundadas sobre arquitetura de sistemas e eficiência operacional.</h2>
+    
     <div class="blog-grid">
-      <div class="art-card">
-        <span class="art-meta">Strategy</span>
-        <h3><span class="le">The Illusion of 'AI Adoption'</span><span class="lp">A Ilusão da Adopção de IA</span></h3>
-        <p class="le">Why buying thousands of corporate SaaS licenses fails to drive revenue without custom system architecture and internal pipeline redesign.</p>
-        <p class="lp">Por que a compra de licenças genéricas de SaaS falha no retorno financeiro se não houver arquitetura e redesenho dos fluxos internos.</p>
+      
+      <!-- Article 1: High Intent SEO Response -->
+      <div class="art-card" id="art-1">
+        <span class="art-meta"><span class="le">Systems Architecture</span><span class="lp">Eficiência Operacional</span></span>
+        
+        <h3 class="le">The Illusion of 'AI Adoption': Why Generic Tools Fail the Bottom Line</h3>
+        <h3 class="lp">Como criar um agente de IA para responder a clientes no WhatsApp de forma humanizada?</h3>
+        
+        <p class="art-preview le">Buying individual ChatGPT seats creates a dangerous illusion of efficiency. True scale requires structural backend architecture rather than superficial tool adoption.</p>
+        <p class="art-preview lp">A criação de um agente de IA para atendimento corporativo exige uma infraestrutura que vá além do prompt tradicional. Para que a ferramenta converta e resolva desafios reais sem parecer um robô, é imperativo ancorá-la num banco de dados contextualizado.</p>
+        
+        <div class="art-content">
+          <div class="lp">
+            <p>Muitas gestoras de PMEs tentam implementar automações ligando diretamente a API do ChatGPT ao WhatsApp. O resultado costuma ser um assistente vago, que alucina com preços ou inventa políticas de devolução que não existem. Isto acontece porque o modelo de linguagem padrão não conhece as regras específicas do seu negócio.</p>
+            <p>Na nossa consultoria de IA para PMEs, resolvemos este desafio estruturando uma pipeline no-code no n8n que atua em três estágios essenciais:</p>
+            <p>1. **Interceptação de Contexto (RAG):** Quando o cliente envia uma mensagem, o sistema consulta uma base de dados vetorizada e segura contendo as suas políticas internas, tabela de preços e histórico. O robô só responde com base nesses dados exatos.</p>
+            <p>2. **Alinhamento de Tom de Voz:** O modelo é instruído através de parâmetros de sistema determinísticos para utilizar uma linguagem formal, acolhedora e alinhada com a identidade da sua marca, evitando respostas excessivamente mecânicas.</p>
+            <p>3. **Gravação e Fluidez:** Toda a conversa atualiza instantaneamente o estado do lead no seu CRM de eleição, permitindo uma transição imediata para um operador humano caso o cliente solicite um atendimento especializado.</p>
+          </div>
+          <div class="le">
+            <p>True leverage occurs when the AI tool is invisible. Instead of a human querying an interface, a background engine intercepts data at the API layer, applies deterministic rules, and writes directly to the destination database. You don't need your team to learn prompt engineering—you need your workflows to be inherently intelligent.</p>
+          </div>
+        </div>
+        <button class="read-btn" onclick="toggleArticle('art-1')"><span class="le">Read article</span><span class="lp">Ler artigo</span></button>
       </div>
-      <div class="art-card">
-        <span class="art-meta">Architecture</span>
-        <h3><span class="le">Why n8n Outperforms Traditional iPaaS</span><span class="lp">Por que o n8n Supera o iPaaS Tradicional</span></h3>
-        <p class="le">A technical breakdown comparing self-hosted agentic nodes with standard legacy enterprise middleware solutions.</p>
-        <p class="lp">Uma análise técnica comparando nós autónomos self-hosted com soluções de integração legadas de grandes empresas.</p>
+
+      <!-- Article 2: RAG & Security SEO Response -->
+      <div class="art-card" id="art-2">
+        <span class="art-meta"><span class="le">Data &amp; Context</span><span class="lp">Privacidade de Dados</span></span>
+        
+        <h3 class="le">Demystifying RAG: Grounding Language Models in Real Operational Data</h3>
+        <h3 class="lp">É seguro colocar dados de clientes ou relatórios financeiros em ferramentas de IA?</h3>
+        
+        <p class="art-preview le">An LLM knows everything about the world, but absolutely nothing about your specific business operations. Retrieval-Augmented Generation (RAG) is how we bridge that knowledge gap securely.</p>
+        <p class="art-preview lp">A segurança e a privacidade dos dados corporativos são as maiores preocupações ao adotar inteligência artificial em pequenas e médias empresas. Injetar informações confidenciais em chats comerciais abertos constitui um risco crítico de conformidade.</p>
+        
+        <div class="art-content">
+          <div class="lp">
+            <p>Se a sua equipa utiliza versões gratuitas ou interfaces públicas de inteligência artificial para resumir contratos ou analisar relatórios financeiros, saiba que esses dados podem ser integrados no treino público desses modelos. Para PMEs que operam sob o regulamento do RGPD, este cenário é insustentável.</p>
+            <p>Para mitigar este risco e garantir proteção total, implementamos arquiteturas baseadas em APIs empresariais com políticas estritas de "Zero Data Retention" (Retenção Zero de Dados). Nestes fluxos estruturados, os seus dados de faturação e as informações dos seus clientes são processados como variáveis temporárias encriptadas. Eles servem exclusivamente para executar a automação e jamais são utilizados para treinar modelos externos. É perfeitamente possível ter a máxima eficiência tecnológica com segurança absoluta.</p>
+          </div>
+          <div class="le">
+            <p>Retrieval-Augmented Generation (RAG) updates the model’s active state without requiring expensive custom training. For compact clinics and professional firms, a well-implemented RAG pipeline converts scattered documents into a reliable, enterprise-grade brain while preserving complete encription and internal compliance.</p>
+          </div>
+        </div>
+        <button class="read-btn" onclick="toggleArticle('art-2')"><span class="le">Read article</span><span class="lp">Ler artigo</span></button>
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- CONTACT SECTION -->
 <section id="contact">
   <div class="wrap">
     <div class="contact-layout">
       <div>
-        <span class="eyebrow"><span class="le">Get In Touch</span><span class="lp">Contacto</span></span>
-        <h2 class="sec-title"><span class="le">Let's build something efficient</span><span class="lp">Vamos construir algo eficiente</span></h2>
+        <span class="eyebrow"><span class="le">Get In Touch</span><span class="lp">Contacto Direto</span></span>
+        <h2 class="sec-title le">Let's build something efficient.</h2>
+        <h2 class="sec-title lp">Vamos construir eficiência real.</h2>
         <p class="le">Ready to audit your workflow architecture? Reach out directly via WhatsApp or connect through professional networks.</p>
-        <p class="lp">Pronto para auditar a arquitetura dos teus fluxos de trabalho? Fala diretamente por WhatsApp ou pelas redes profissionais.</p>
+        <p class="lp">Pronto para auditar a arquitetura e automação dos seus fluxos operacionais? Estabeleça contacto direto para agendamento.</p>
+        
         <div class="c-links">
-          <a href="https://wa.me/41765837353?text=Ol%C3%A1%20C%C3%A1tia%2C%20quero%20agendar%2030%20minutos%20gratuitos." target="_blank" rel="noopener" class="c-link c-link-wa">
-            <span class="c-lbl">WhatsApp Direct</span>
-            <span class="c-val">+41 76 583 73 53</span>
+          <a href="https://wa.me/41765837353?text=Ol%C3%A1%20C%C3%A1tia%2C%20gostaria%20de%20agendar%20a%20chamada%20gratuita%20de%2030%20minutos%20para%20avaliar%20os%20desafios%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener" class="c-link c-link-wa-tiffany">
+            <span class="c-lbl">Discovery Call (30 Minutos Gratuita)</span>
+            <span class="c-val">Agendar Conversa Exclusiva via WhatsApp</span>
           </a>
         </div>
-        <div class="c-social-row">
-          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="c-social-btn">
-            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-            LinkedIn
-          </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener" class="c-social-btn">
-            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m4.4 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9m0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5m4.75-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
-            Instagram
-          </a>
+        
+        <div class="avail">
+          <div class="avail-dot"></div>
+          <div class="avail-text">
+            <span class="le">Currently accepting 2 new projects for Q3 2026</span>
+            <span class="lp">Disponibilidade para aceitar 2 novos projetos de arquitetura sistémica no Q3 de 2026</span>
+          </div>
         </div>
       </div>
     </div>
@@ -362,12 +569,32 @@ footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.07);padding
 
 </main>
 
+<!-- FOOTER (Social Icons with Instagram Added) -->
 <footer>
   <div class="foot-in">
     <div class="foot-logo">Cátia<span>.</span></div>
-    <div class="foot-copy">&copy; 2026 Cátia Effertz · Gothenburg, Sweden</div>
+    <div class="foot-links">
+      <a href="mailto:hello@catiaeffertz.com">hello@catiaeffertz.com</a>
+      
+      <a href="https://instagram.com/catiaeffertz" target="_blank" rel="noopener" aria-label="Instagram Profissional">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        Instagram
+      </a>
+
+      <a href="https://linkedin.com/in/catiaeffertz" target="_blank" rel="noopener" aria-label="LinkedIn Profissional">
+        <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+    <div class="foot-copy">&copy; 2026 Cátia Effertz · Gotemburgo, Suécia</div>
   </div>
 </footer>
+
+<!-- FLOATING DISCOVERY CTA -->
+<a href="https://wa.me/41765837353?text=Ol%C3%A1%20C%C3%A1tia%2C%20gostaria%20de%20agendar%20a%20chamada%20gratuita%20de%2030%20minutos%20para%20avaliar%20os%20desafios%20do%20meu%20neg%C3%B3cio." class="wa-float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-3.52c1.6.95 3.51 1.45 5.423 1.451 5.428 0 9.845-4.393 9.848-9.793.002-2.617-1.012-5.078-2.857-6.927C17.117 3.36 14.661 2.344 12.01 2.344c-5.43 0-9.847 4.393-9.85 9.794-.001 1.98.525 3.914 1.52 5.62l-.994 3.633 3.733-.976zm11.23-7.587c-.3-.15-1.77-.874-2.047-.975-.277-.1-.478-.15-.678.15-.2.3-.778.975-.953 1.176-.176.2-.35.225-.65.075-.301-.15-1.267-.467-2.414-1.492-.892-.797-1.494-1.78-1.67-2.08-.175-.3-.018-.462.132-.612.135-.135.301-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.678-1.635-.93-2.245-.244-.587-.49-.508-.678-.518-.175-.008-.375-.01-.575-.01-.2 0-.525.075-.8.375-.277.3-1.054 1.03-1.054 2.515s1.08 2.922 1.23 3.122c.15.2 2.126 3.248 5.152 4.555.72.311 1.281.497 1.72.637.723.23 1.38.197 1.901.12.58-.087 1.77-.723 2.02-1.388.25-.664.25-1.234.175-1.35-.075-.118-.277-.188-.577-.338z"/></svg>
+  <span><span class="le">Discovery Call</span><span class="lp">Chamada 30 Min</span></span>
+</a>
 
 <script>
 function toggleLang() {
@@ -387,7 +614,22 @@ function toggleLang() {
     lblEn.classList.remove('active');
   }
 }
+
+function toggleArticle(id) {
+  var card = document.getElementById(id);
+  var btn = card.querySelector('.read-btn');
+  var isPt = document.documentElement.getAttribute('data-lang') === 'pt';
+  
+  card.classList.toggle('open');
+  
+  if (card.classList.contains('open')) {
+    btn.innerHTML = isPt ? 'Fechar artigo' : 'Close article';
+  } else {
+    btn.innerHTML = isPt ? 'Ler artigo' : 'Read article';
+  }
+}
 </script>
 
 </body>
+</html>
 </html>
