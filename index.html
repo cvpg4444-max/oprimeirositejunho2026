@@ -67,13 +67,17 @@ nav{position:sticky;top:0;z-index:200;height:var(--nav-h);background:rgba(255,25
 .nav-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:100%;display:flex;align-items:center;justify-content:space-between;gap:2rem;}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;font-weight:400;color:var(--ink);}
 .nav-logo span{color:var(--teal);}
+.nav-left-container{display:flex;align-items:center;gap:2rem;}
 .nav-links{display:flex;align-items:center;gap:1.75rem;}
 .nav-links a{font-size:.84rem;font-weight:500;color:var(--muted);letter-spacing:.02em;transition:color .2s;}
 .nav-links a:hover{color:var(--ink);opacity:1;}
+.nav-socials{display:flex;align-items:center;gap:0.8rem;margin-left:0.5rem;border-left:1px solid var(--border);padding-left:1rem;}
+.nav-socials svg{width:16px;height:16px;fill:var(--muted);transition:fill .2s;}
+.nav-socials a:hover svg{fill:var(--teal);}
 .lang-btn{background:none;border:1.5px solid var(--teal);border-radius:6px;padding:.5rem 1.1rem;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:500;cursor:pointer;color:var(--teal);transition:all .2s;letter-spacing:.04em;}
 .lang-btn:hover{background:var(--surface);color:var(--teal-d);border-color:var(--teal-d);}
 .lang-btn .active{color:var(--teal-d);font-weight:600;}
-@media(max-width:760px){.nav-links{display:none;}}
+@media(max-width:850px){.nav-links, .nav-socials{display:none;}}
 
 /* ── Hero ── */
 #home{padding:clamp(5rem,12vw,9rem) 0 clamp(3.5rem,8vw,6rem);border-top:none!important;}
@@ -100,112 +104,9 @@ nav{position:sticky;top:0;z-index:200;height:var(--nav-h);background:rgba(255,25
   object-fit: cover;
   object-position: top;
 }
-
 @media(max-width:800px){.hero-grid{grid-template-columns:1fr;}}
 
-/* ── About ── */
-.about-photo-container {
-  width: 100%;
-  aspect-ratio: 3/4;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-.about-photo-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.about-text p{font-size:1rem;line-height:1.7;max-width:500px;}
-.about-text p+p{margin-top:1rem;}
-.about-text .closer{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:300;font-style:italic;color:var(--headline);margin-top:1.5rem;line-height:1.35;display:block;}
-</style>
-</head>
-<body>
-
-<nav>
-  <div class="nav-in">
-    <a href="#home" class="nav-logo">Cátia<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="#services"><span class="le">Services</span><span class="lp">Serviços</span></a></li>
-      <li><a href="#about"><span class="le">About</span><span class="lp">Sobre</span></a></li>
-      <li><a href="#portfolio"><span class="le">Work</span><span class="lp">Trabalho</span></a></li>
-      <li><a href="#blog">Magazine</a></li>
-      <li><a href="#contact"><span class="le">Contact</span><span class="lp">Contacto</span></a></li>
-    </ul>
-    <button class="lang-btn" onclick="toggleLang()">
-      <span id="lbl-en">EN</span>&nbsp;/&nbsp;<span id="lbl-pt" class="active">PT</span>
-    </button>
-  </div>
-</nav>
-
-<main>
-
-<section id="home">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <span class="eyebrow"><span class="le">AI Business Consultant · MIT Professional Education · Gothenburg, Sweden</span><span class="lp">Consultora de IA Business · MIT Professional Education · Gotemburgo, Suécia</span></span>
-        <h1 class="display le">You don't need<br>another AI tool.<br>You need <em>a strategy.</em></h1>
-        <h1 class="display lp">Não precisas de<br>mais uma ferramenta.<br>Precisas de <em>uma estratégia.</em></h1>
-        <p class="hero-sub le">I diagnose your business, identify where AI creates real value, and build the systems that deliver it.</p>
-        <p class="hero-sub lp">Analiso o teu negócio, identifico onde a IA cria valor real, e construo os sistemas que o entregam.</p>
-        <p class="hero-services le">Strategy · Marketing &amp; Sales · Automation · Data Analysis · Training</p>
-        <p class="hero-services lp">Estratégia · Marketing &amp; Vendas · Automação · Análise de Dados · Formação</p>
-        <div class="btn-group">
-          <a href="https://wa.me/41765837353?text=Ol%C3%A1%20C%C3%A1tia%2C%20quero%20agendar%2030%20minutos%20gratuitos." target="_blank" rel="noopener" class="btn"><span class="le">Book 30 free minutes</span><span class="lp">Agenda 30 minutos gratuitos</span></a>
-          <a href="#portfolio" class="btn-ghost"><span class="le">See the work</span><span class="lp">Ver o trabalho</span></a>
-        </div>
-      </div>
-      <div>
-        <div class="hero-image-container">
-          <img src="catia.png" alt="Cátia Effertz">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <div class="two-col">
-      <div class="about-photo-container">
-        <img src="n8n.png" alt="Automation Workflows">
-      </div>
-      <div class="about-text">
-        <span class="eyebrow"><span class="le">My Journey</span><span class="lp">A minha jornada</span></span>
-        <h2 class="sec-title"><span class="le">15 years of real business experience</span><span class="lp">15 anos de experiência real de negócio</span></h2>
-        <p class="le">I focus on the technical architecture of AI systems and automated workflows designed to assist clinics, human resources, and solopreneurs.</p>
-        <p class="lp">Foco-me na arquitetura técnica de sistemas de IA e fluxos de trabalho automatizados desenhados para ajudar clínicas, recursos humanos e solopreneurs.</p>
-        <span class="closer">Cátia Effertz</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<script>
-function toggleLang() {
-  var html = document.documentElement;
-  var currentLang = html.getAttribute('data-lang');
-  var nextLang = currentLang === 'en' ? 'pt' : 'en';
-  html.setAttribute('data-lang', nextLang);
-  
-  var lblEn = document.getElementById('lbl-en');
-  var lblPt = document.getElementById('lbl-pt');
-  
-  if (nextLang === 'en') {
-    lblEn.classList.add('active');
-    lblPt.classList.remove('active');
-  } else {
-    lblPt.classList.add('active');
-    lblEn.classList.remove('active');
-  }
-}
-</script>
-
-</body>
-</html>
-</html>
+/* ── Services ── */
+#services{background:var(--bg-alt);}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;}
+.svc-card{background:var(--
