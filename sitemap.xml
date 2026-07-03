@@ -12,6 +12,11 @@
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://catiaeffertz.com/politica-privacidade.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <priority>0.3</priority>
+  </url>
   <!-- NOVO ARTIGO? Copia um bloco <url> destes, muda o loc e a data -->
   <url>
     <loc>https://catiaeffertz.com/magazine/agente-ia-whatsapp.html</loc>
