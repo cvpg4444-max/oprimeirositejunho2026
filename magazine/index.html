@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" data-lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Magazine | Cátia Effertz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magazine | Cátia Effertz</title>
+<style>
+:root{--bg:#FFFFFF;--bg-alt:#F9FBFB;--ink:#111817;--muted:#4A5D5C;--faint:#8AA1A0;--tiffany:#00A8A4;--tiffany-hover:#008A87;--brass:#3D9E9B;--border:#E2ECEB;--dark:#0A1211;--headline:#003D39;--max:1100px;--pad:clamp(1.5rem,5vw,3.5rem);--nav-h:64px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.65;}
+nav{position:sticky;top:0;z-index:200;height:var(--nav-h);background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:100%;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-style:italic;color:var(--ink);}
+.nav-logo span{color:var(--tiffany);}
+.nav-links{display:flex;gap:1.8rem;list-style:none;}
+.nav-links a{font-size:.82rem;font-weight:500;color:var(--muted);text-transform:uppercase;text-decoration:none;}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:3rem var(--pad);}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;text-align:center;margin-bottom:3rem;color:var(--headline);}
+.blog-grid{display:grid;grid-template-columns:1fr;gap:2rem;max-width:800px;margin:0 auto;}
+.art-card{border:1px solid var(--border);border-radius:6px;padding:2rem;display:block;text-decoration:none;color:var(--ink);}
+.art-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--headline);margin-bottom:0.5rem;}
+</style>
 </head>
 <body>
-    <h1>Magazine</h1>
-    <div class="blog-grid">
-        <a href="agente-ia-whatsapp.html" class="art-card">
-            <h3>Como criar um agente de IA para WhatsApp?</h3>
-        </a>
-        <a href="seguranca-dados-ia-rgpd.html" class="art-card">
-            <h3>É seguro usar IA com dados de clientes?</h3>
-        </a>
-    </div>
+
+<nav>
+  <div class="nav-in">
+    <a href="../index.html" class="nav-logo">Cátia<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">Sobre</a></li>
+      <li><a href="../index.html#services">Especialidades</a></li>
+      <li><a href="index.html">Magazine</a></li>
+      <li><a href="../index.html#contact">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+    <section id="blog">
+        <div class="wrap">
+            <h2 class="sec-title">Magazine</h2>
+            <div class="blog-grid">
+                <a class="art-card" href="#">
+                    <h3>Como criar um agente de IA para WhatsApp?</h3>
+                    <p>Guia prático para automação de atendimento...</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
 </body>
 </html>
