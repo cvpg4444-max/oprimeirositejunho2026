@@ -1,53 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt" data-lang="pt">
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Magazine | Cátia Effertz</title>
+<meta name="description" content="Magazine de Cátia Effertz: artigos práticos sobre IA para PMEs — automação de processos, agentes de IA, RAG e privacidade de dados. Sem hype, sem jargão.">
+<title>Magazine · IA para PMEs, automação e eficiência | Cátia Effertz</title>
+<link rel="canonical" href="https://catiaeffertz.com/magazine/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#00A8A4">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://catiaeffertz.com/magazine/">
+<meta property="og:title" content="Magazine · IA para PMEs, automação e eficiência | Cátia Effertz">
+<meta property="og:description" content="Artigos práticos sobre IA para PMEs — automação de processos, agentes de IA, RAG e privacidade de dados.">
+<meta property="og:image" content="https://catiaeffertz.com/catia.png">
+<meta property="og:locale" content="pt_PT">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:opsz,wght@14..32,300..600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FFFFFF;--bg-alt:#F9FBFB;--ink:#111817;--muted:#4A5D5C;--faint:#8AA1A0;--tiffany:#00A8A4;--tiffany-hover:#008A87;--brass:#3D9E9B;--border:#E2ECEB;--dark:#0A1211;--headline:#003D39;--max:1100px;--pad:clamp(1.5rem,5vw,3.5rem);--nav-h:64px;}
+:root{--bg:#FFFFFF;--bg-alt:#F9FBFB;--ink:#111817;--muted:#4A5D5C;--faint:#8AA1A0;--tiffany:#00A8A4;--tiffany-hover:#008A87;--brass:#3D9E9B;--border:#E2ECEB;--dark:#0A1211;--headline:#003D39;--max:850px;--pad:clamp(1.5rem,5vw,3.5rem);}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.65;}
-nav{position:sticky;top:0;z-index:200;height:var(--nav-h);background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.nav-in{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:100%;display:flex;align-items:center;justify-content:space-between;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;font-size:16px;}
+a{color:var(--tiffany);text-decoration:none;}
+a:hover{opacity:.7;}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.15;letter-spacing:-.02em;color:var(--headline);}
+nav{position:sticky;top:0;z-index:200;height:64px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 var(--pad);height:100%;display:flex;align-items:center;justify-content:space-between;}
 .nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-style:italic;color:var(--ink);}
 .nav-logo span{color:var(--tiffany);}
-.nav-links{display:flex;gap:1.8rem;list-style:none;}
-.nav-links a{font-size:.82rem;font-weight:500;color:var(--muted);text-transform:uppercase;text-decoration:none;}
-.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:3rem var(--pad);}
-.sec-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;text-align:center;margin-bottom:3rem;color:var(--headline);}
-.blog-grid{display:grid;grid-template-columns:1fr;gap:2rem;max-width:800px;margin:0 auto;}
-.art-card{border:1px solid var(--border);border-radius:6px;padding:2rem;display:block;text-decoration:none;color:var(--ink);}
-.art-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--headline);margin-bottom:0.5rem;}
+.nav-back{font-size:.8rem;font-weight:500;color:var(--muted);letter-spacing:.05em;text-transform:uppercase;}
+main{max-width:var(--max);margin:0 auto;padding:clamp(3rem,8vw,5rem) var(--pad);}
+.eyebrow{display:block;font-size:.68rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin-bottom:.9rem;}
+main h1{font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:.6rem;}
+.mag-sub{font-size:1.05rem;color:var(--muted);margin-bottom:3rem;max-width:560px;}
+.art-card{display:block;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:2rem 2.5rem;margin-bottom:1.5rem;transition:all .2s;color:var(--ink)!important;}
+.art-card:hover{border-color:var(--tiffany);opacity:1;transform:translateY(-2px);}
+.art-card .art-meta{display:block;font-size:.68rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin-bottom:.6rem;}
+.art-card h2{font-size:1.45rem;margin-bottom:.5rem;}
+.art-card p{font-size:.92rem;color:var(--muted);line-height:1.7;}
+.art-card .art-more{display:inline-block;margin-top:.8rem;font-size:.78rem;font-weight:600;color:var(--tiffany);letter-spacing:.08em;text-transform:uppercase;border-bottom:1.5px solid var(--tiffany);padding-bottom:.15rem;}
+footer{background:var(--dark);padding:2.5rem 0;margin-top:4rem;}
+.foot-in{max-width:1100px;margin:0 auto;padding:0 var(--pad);display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+.foot-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.4);}
+.foot-logo span{color:var(--tiffany);}
+.foot-copy{font-size:.74rem;color:rgba(255,255,255,.3);}
 </style>
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <a href="../index.html" class="nav-logo">Cátia<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="../index.html#about">Sobre</a></li>
-      <li><a href="../index.html#services">Especialidades</a></li>
-      <li><a href="index.html">Magazine</a></li>
-      <li><a href="../index.html#contact">Contacto</a></li>
-    </ul>
+    <a href="/" class="nav-logo">Cátia<span>.</span></a>
+    <a href="/" class="nav-back">← catiaeffertz.com</a>
   </div>
 </nav>
 
 <main>
-    <section id="blog">
-        <div class="wrap">
-            <h2 class="sec-title">Magazine</h2>
-            <div class="blog-grid">
-                <a class="art-card" href="#">
-                    <h3>Como criar um agente de IA para WhatsApp?</h3>
-                    <p>Guia prático para automação de atendimento...</p>
-                </a>
-            </div>
-        </div>
-    </section>
+  <span class="eyebrow">Magazine</span>
+  <h1>IA para PMEs, sem hype.</h1>
+  <p class="mag-sub">Análises práticas sobre automação de processos, agentes de IA e eficiência operacional — escritas por quem geriu negócios reais durante quinze anos.</p>
+
+  <!-- ═══════════════════════════════════════════════
+       NOVO ARTIGO? Cola o bloco do card AQUI, por cima
+       dos existentes (o mais recente fica primeiro).
+       Modelo do bloco:
+
+  <a class="art-card" href="/magazine/SLUG.html">
+    <span class="art-meta">CATEGORIA · DATA</span>
+    <h2>TÍTULO DO ARTIGO</h2>
+    <p>RESUMO EM 1-2 FRASES.</p>
+    <span class="art-more">Ler artigo</span>
+  </a>
+       ═══════════════════════════════════════════════ -->
+
+  <a class="art-card" href="/magazine/agente-ia-whatsapp.html">
+    <span class="art-meta">Eficiência Operacional · 3 julho 2026</span>
+    <h2>Como criar um agente de IA para responder a clientes no WhatsApp de forma humanizada?</h2>
+    <p>RAG, tom de voz e integração com CRM: os três estágios de um agente que responde como a sua marca — sem alucinar preços nem políticas.</p>
+    <span class="art-more">Ler artigo</span>
+  </a>
+
+  <a class="art-card" href="/magazine/seguranca-dados-ia-rgpd.html">
+    <span class="art-meta">Privacidade de Dados · 3 julho 2026</span>
+    <h2>É seguro colocar dados de clientes ou relatórios financeiros em ferramentas de IA?</h2>
+    <p>Zero Data Retention, APIs empresariais e RAG: como usar IA com eficiência máxima em total conformidade com o RGPD.</p>
+    <span class="art-more">Ler artigo</span>
+  </a>
+
 </main>
+
+<footer>
+  <div class="foot-in">
+    <div class="foot-logo">Cátia<span>.</span></div>
+    <div class="foot-copy">&copy; 2026 Cátia Effertz · Gotemburgo, Suécia</div>
+  </div>
+</footer>
 
 </body>
 </html>
